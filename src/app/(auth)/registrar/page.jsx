@@ -69,14 +69,13 @@ const registerPage = () => {
                         <FieldError />
                     </TextField>
                     <div className="flex gap-2">
-                        <Button type="submit">
+                        <Button type="submit" className='w-full'>
 
                             Create Account
                         </Button>
-
                     </div>
                 </Form>
-                    <p class="text-center mt-4">Don't have an account? <Link href="/login" class="text-blue-500 underline">Register</Link></p>
+                    <p className="text-center mt-4">Already have an account? <Link href="/login" class="text-blue-500 underline">Login</Link></p>
             </div>
         </div>
     );
