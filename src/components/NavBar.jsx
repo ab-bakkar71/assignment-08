@@ -45,7 +45,7 @@ const NavBar = () => {
 
                         <Link className='text-2xl font-bold' href='/'><span className='text-[#198c19]'>Tiles</span> Gallery</Link>
                     </div>
-                    <ul className="hidden items-center gap-4 md:flex">
+                    <ul className="hidden items-center gap-4 md:flex text-sm font-semibold">
                         <li>
                             <NavLink/>
                         </li>
@@ -66,9 +66,9 @@ const NavBar = () => {
                            
                         </ul>
 
-                        <div className='flex gap-2'>
-                            <Link href='/login' className="block py-2">Login</Link>
-                            <Link href='registrar' className="block py-2">Register</Link>
+                        <div className='flex gap-2 mt-2'>
+                            <Link href='/login' className="className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300">Login</Link>
+                            <Link href='registrar' className="className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300">Register</Link>
                         </div>
                     </div>
                 )}

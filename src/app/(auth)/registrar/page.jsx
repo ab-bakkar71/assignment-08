@@ -2,8 +2,8 @@ import React from 'react';
 
 const registerPage = () => {
     return (
-        <div>
-        registerPage    
+        <div className='min-h-[80vh] flex justify-center items-center'>
+          
         </div>
     );
 };
