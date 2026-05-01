@@ -5,10 +5,11 @@ const allTiles = async() => {
 
 
     // dev
-    // const res = await fetch("http://localhost:3000/tiles.json")
-
+   const res = await fetch("http://localhost:3000/tiles.json");
     // production
-    const res = await fetch("https://the-tails-gallery.vercel.app/tiles.json")
+    // const res = await fetch("https://the-tails-gallery.vercel.app/tiles.json", {
+    //     cache: "no-store"
+    // });
     const allTiles = await res.json()
     
     return (
