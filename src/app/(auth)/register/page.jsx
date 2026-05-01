@@ -3,9 +3,14 @@
 import { authClient } from '@/lib/auth-client';
 import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const registerPage = () => {
+
+    const router = useRouter()
+
     const handelRegister = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
@@ -17,10 +22,20 @@ const registerPage = () => {
             email: userData.email,
             password: userData.password,
             image: userData.image,
-            callbackURL: "/login"
+            
             
         })
+
+        if(!error){
+            router.push("/login")
+        }
        
+        if(error){
+            toast.error(error.message)
+        }
+        if(data){
+            toast.success('Registration successful ✅')
+        }
     }
 
 
