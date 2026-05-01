@@ -3,7 +3,12 @@ import React from 'react';
 
 const allTiles = async() => {
 
-    const res = await fetch("http://localhost:3000/tiles.json")
+
+    // dev
+    // const res = await fetch("http://localhost:3000/tiles.json")
+
+    // production
+    const res = await fetch("https://the-tails-gallery.vercel.app/tiles.json")
     const allTiles = await res.json()
     
     return (
