@@ -1,13 +1,28 @@
 "use client"
 
+import { authClient } from '@/lib/auth-client';
 import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
 import Link from 'next/link';
 import React from 'react';
 
 const registerPage = () => {
-    const handelRegister = () => {
+    const handelRegister = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const userData = Object.fromEntries(formData.entries());
+        
 
+        const { data, error } = await authClient.signUp.email({
+            name: userData.name,
+            email: userData.email,
+            password: userData.password,
+            image: userData.image,
+            callbackURL: "/login"
+            
+        })
+       
     }
+
 
 
     return (
@@ -15,12 +30,12 @@ const registerPage = () => {
 
             {/* form */}
             <div className='p-16 border shadow-sm rounded-lg'>
-                 <h1 className="text-center mb-4 text-2xl font-bold">Create Your Account</h1>
+                <h1 className="text-center mb-4 text-2xl font-bold">Create Your Account</h1>
                 <Form className="flex w-96 flex-col gap-4" onSubmit={handelRegister}>
                     <TextField
                         isRequired
 
-                        name="fullName">
+                        name="name">
                         <Label>Full Name</Label>
                         <Input placeholder="Enter Your Name" />
 
@@ -75,7 +90,7 @@ const registerPage = () => {
                         </Button>
                     </div>
                 </Form>
-                    <p className="text-center mt-4">Already have an account? <Link href="/login" class="text-blue-500 underline">Login</Link></p>
+                <p className="text-center mt-4">Already have an account? <Link href="/login" className="text-blue-500 underline">Login</Link></p>
             </div>
         </div>
     );

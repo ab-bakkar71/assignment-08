@@ -1,15 +1,25 @@
 "use client"
 
+import { authClient } from '@/lib/auth-client';
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from '@heroui/react';
 import Link from 'next/link';
-import React, { useState } from 'react';
-import { Eye, EyeSlash } from "@gravity-ui/icons";
+
+
 
 const loginPage = () => {
-    const [isVisible, setIsVisible] = useState(false);
 
-    const handelLogin = () => {
 
+    const handelLogin = async(e) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const userData = Object.fromEntries(formData.entries());
+
+        const { data, error } = await authClient.signIn.email({
+                    email: userData.email,
+                    password: userData.password,
+                })
+
+                console.log(data, error);
     }
 
     return (
