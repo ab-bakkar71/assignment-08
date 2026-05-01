@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with beautiful blue glaze finish",
+    "image": "https://i.ibb.co.com/sJ5bk6jk/1.webp",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Matte White Porcelain Tile",
+    "description": "Elegant matte finish porcelain tile with subtle texture",
+    "image": "https://i.ibb.co.com/WvM8ZQKY/2.jpg",
+    "category": "porcelain",
+    "price": 52.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Terracotta Rustic Tile",
+    "description": "Handcrafted terracotta tile with warm earthy tones",
+    "image": "https://i.ibb.co.com/39mMRxJb/3.webp",
+    "category": "ceramic",
+    "price": 38.50,
+    "currency": "USD",
+    "dimensions": "30x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_004",
+    "title": "Glossy Ocean Blue Ceramic Tile",
+    "description": "Vibrant glossy blue ceramic tile perfect for bathrooms",
+    "image": "https://i.ibb.co.com/KjtvJdgj/4.webp",
+    "category": "ceramic",
+    "price": 47.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_005",
+    "title": "Marble Effect Porcelain Tile",
+    "description": "Premium porcelain tile with realistic marble veining",
+    "image": "https://i.ibb.co.com/6cKNyM0M/5.jpg",
+    "category": "porcelain",
+    "price": 68.75,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Wood Look Plank Tile",
+    "description": "Realistic wood grain porcelain plank tile",
+    "image": "https://i.ibb.co.com/WvX7KmPh/6.jpg",
+    "category": "porcelain",
+    "price": 55.99,
+    "currency": "USD",
+    "dimensions": "20x120 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_007",
+    "title": "Black Matte Ceramic Tile",
+    "description": "Sophisticated matte black ceramic tile",
+    "image": "https://i.ibb.co.com/W4tB07Dz/7.jpg",
+    "category": "ceramic",
+    "price": 49.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_008",
+    "title": "Patterned Moroccan Tile",
+    "description": "Traditional handmade Moroccan pattern ceramic tile",
+    "image": "https://i.ibb.co.com/vydMn2N/8.jpg",
+    "category": "ceramic",
+    "price": 62.50,
+    "currency": "USD",
+    "dimensions": "15x15 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_009",
+    "title": "Emerald Green Gloss Tile",
+    "description": "Luxurious emerald green glossy ceramic wall tile",
+    "image": "https://i.ibb.co.com/G4SWDbQG/9.webp",
+    "category": "ceramic",
+    "price": 44.99,
+    "currency": "USD",
+    "dimensions": "30x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_010",
+    "title": "Rose Gold Metallic Tile",
+    "description": "Luxurious rose gold metallic effect porcelain tile",
+    "image": "https://i.ibb.co.com/SwVRNqDY/10.jpg",
+    "category": "porcelain",
+    "price": 79.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": false
+  }
+]

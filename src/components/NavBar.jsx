@@ -54,7 +54,7 @@ const NavBar = () => {
 
                     <div className='hidden gap-2 md:flex'>
                         <Link  href='/login' className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300'>Login</Link>
-                        <Link href='registrar' className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300'>Register</Link>
+                        <Link href='/register' className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300'>Register</Link>
                     </div>
                 </header>
                 {isMenuOpen && (
@@ -68,7 +68,7 @@ const NavBar = () => {
 
                         <div className='flex gap-2 mt-2'>
                             <Link href='/login' className="className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300">Login</Link>
-                            <Link href='registrar' className="className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300">Register</Link>
+                            <Link href='/register' className="className='py-2 px-4 rounded-sm border border-[#198c19] shadow-sm hover:text-white hover:bg-[#198c19] transition duration-300">Register</Link>
                         </div>
                     </div>
                 )}

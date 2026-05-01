@@ -20,7 +20,7 @@ const FooterInput = () => {
         <Description>Minimum 4 rows</Description>
       </TextField>
     </Surface>
-    <div className="flex gap-2">
+    <div className="flex gap-2 mt-4">
         <Button className='bg-[#198c19]' type="submit">
           Submit
         </Button>
