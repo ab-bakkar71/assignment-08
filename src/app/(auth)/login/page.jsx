@@ -2,6 +2,7 @@
 
 import { authClient } from '@/lib/auth-client';
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from '@heroui/react';
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 
@@ -24,11 +25,17 @@ const loginPage = () => {
         if (error) {
             toast.error(error.message)
         }
-        if (data){
+        if (data) {
             toast.success("Login successful!")
         }
 
 
+    }
+
+    const handelGoogleLogin = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        })
     }
 
     return (
@@ -38,7 +45,7 @@ const loginPage = () => {
             <div className='p-16 border shadow-sm rounded-lg'>
                 <h1 className="text-center mb-4 text-2xl font-bold">Sign in</h1>
                 <Form className="flex w-96 flex-col gap-4" onSubmit={handelLogin}>
-           
+
                     <TextField
                         isRequired
                         name="email"
@@ -79,11 +86,16 @@ const loginPage = () => {
                         <FieldError />
                     </TextField>
                     <div className="flex gap-2">
-                        <Button type="submit" className='w-full'>
+                        <Button type="submit" className='w-full bg-[#198c19] hover:bg-[#21b121]'>
 
                             Sign in
                         </Button>
                     </div>
+                    {/* google sing in btn */}
+                    <Button onClick={handelGoogleLogin} className="w-full" variant="tertiary">
+                        <Icon icon="devicon:google" />
+                        Sign in with Google
+                    </Button>
                 </Form>
                 <p className="text-center mt-4">Don't have an account? <Link href="/register" className="text-blue-500 underline">Register</Link></p>
             </div>

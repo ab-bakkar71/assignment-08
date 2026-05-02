@@ -2,6 +2,7 @@
 
 import { authClient } from '@/lib/auth-client';
 import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -15,27 +16,33 @@ const registerPage = () => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const userData = Object.fromEntries(formData.entries());
-        
+
 
         const { data, error } = await authClient.signUp.email({
             name: userData.name,
             email: userData.email,
             password: userData.password,
             image: userData.image,
-            
-            
+
+
         })
 
-        if(!error){
+        if (!error) {
             router.push("/login")
         }
-       
-        if(error){
+
+        if (error) {
             toast.error(error.message)
         }
-        if(data){
+        if (data) {
             toast.success('Registration successful ✅')
         }
+    }
+
+    const handelGoogleRegister = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        })
     }
 
 
@@ -104,6 +111,10 @@ const registerPage = () => {
                             Create Account
                         </Button>
                     </div>
+                    <Button onClick={handelGoogleRegister} className="w-full" variant="tertiary">
+                        <Icon icon="devicon:google" />
+                        Sign in with Google
+                    </Button>
                 </Form>
                 <p className="text-center mt-4">Already have an account? <Link href="/login" className="text-blue-500 underline">Login</Link></p>
             </div>
