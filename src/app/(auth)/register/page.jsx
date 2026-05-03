@@ -106,7 +106,7 @@ const registerPage = () => {
                         <FieldError />
                     </TextField>
                     <div className="flex gap-2">
-                        <Button type="submit" className='w-full'>
+                        <Button type="submit" className='w-full bg-[#198c19] hover:bg-[#21b121]'>
 
                             Create Account
                         </Button>
