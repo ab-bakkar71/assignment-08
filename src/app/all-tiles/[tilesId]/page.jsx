@@ -35,15 +35,15 @@ const tilesDetailsPage = async ({ params }) => {
                     </div>
                     <div className="grid grid-cols-2 border-b border-gray-300 px-4 py-2">
                         <span className="text-gray-600 font-medium">CATEGORY</span>
-                        <span className="text-gray-800">${tile.category}</span>
+                        <span className="text-gray-800">{tile.category}</span>
                     </div>
                     <div className="grid grid-cols-2 border-b border-gray-300 px-4 py-2">
                         <span className="text-gray-600 font-medium">DIMENSIONS:</span>
-                        <span className="text-gray-800">${tile.dimensions}</span>
+                        <span className="text-gray-800">{tile.dimensions}</span>
                     </div>
                     <div className="grid grid-cols-2 border-b border-gray-300 px-4 py-2">
                         <span className="text-gray-600 font-medium">MATERIAL</span>
-                        <span className="text-gray-800">${tile.material}</span>
+                        <span className="text-gray-800">{tile.material}</span>
                     </div>
                     
 
