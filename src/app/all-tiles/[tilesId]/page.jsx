@@ -3,7 +3,14 @@ import React from 'react';
 
 const tilesDetailsPage = async ({ params }) => {
     const { tilesId } = await params;
+    
+
+
     const rse = await fetch("http://localhost:3000/tiles.json");
+    // const rse = await fetch("https://the-tiles-gallery.vercel.app/tiles.json");
+
+
+
 
     const tiles = await rse.json();
     const tile = tiles.find(t => t.id === tilesId)

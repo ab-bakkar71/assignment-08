@@ -23,8 +23,6 @@ const registerPage = () => {
             email: userData.email,
             password: userData.password,
             image: userData.image,
-
-
         })
 
         if (!error) {
@@ -107,7 +105,6 @@ const registerPage = () => {
                     </TextField>
                     <div className="flex gap-2">
                         <Button type="submit" className='w-full bg-[#198c19] hover:bg-[#21b121]'>
-
                             Create Account
                         </Button>
                     </div>

@@ -1,7 +1,7 @@
 "use client"
 import UpdateProfile from '@/components/UpdateProfile';
 import { authClient } from '@/lib/auth-client';
-import { Avatar, Button, Card } from '@heroui/react';
+import { Avatar, Card } from '@heroui/react';
 import React from 'react';
 
 const ProfilePage = () => {

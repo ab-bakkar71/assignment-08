@@ -1,16 +1,14 @@
-import MarqueePage from '@/components/Marquee';
 import TilesCard from '@/components/TilesCard';
 import React from 'react';
 
 const allTiles = async () => {
 
+  const res = await fetch("http://localhost:3000/tiles.json")
 
-    // dev
-    const res = await fetch("http://localhost:3000/tiles.json");
-    // production
-    // const res = await fetch("https://the-tails-gallery.vercel.app/tiles.json", {
-    //     cache: "no-store"
-    // });
+//     const res = await fetch("https://the-tiles-gallery.vercel.app/tiles.json",{
+//   cache: "no-store",
+// });
+   
     const allTiles = await res.json()
 
     return (

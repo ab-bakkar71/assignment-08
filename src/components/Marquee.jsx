@@ -5,9 +5,7 @@ const MarqueePage = async() => {
    // dev
     const res = await fetch("http://localhost:3000/tiles.json");
     // production
-    // const res = await fetch("https://the-tails-gallery.vercel.app/tiles.json", {
-    //     cache: "no-store"
-    // });
+    // const res = await fetch("https://the-tiles-gallery.vercel.app/tiles.json") 
 
     const data = await res.json();
     const tiles = data.slice(0, 4);
