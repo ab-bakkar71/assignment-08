@@ -39,13 +39,15 @@ const loginPage = () => {
     }
 
     return (
-        <div className='min-h-[80vh] flex justify-center items-center'>
+        <div className='min-h-[80vh] flex justify-center items-center p-4'> {/* Added p-4 for mobile breathing room */}
 
-            {/* form */}
-            <div className='p-16 border shadow-sm rounded-lg'>
+            {/* form container */}
+            <div className='w-full max-w-md p-6 sm:p-10 md:p-16 border shadow-sm rounded-lg'>
+                {/* Changed w-96 to w-full max-w-md and used responsive padding */}
+
                 <h1 className="text-center mb-4 text-2xl font-bold">Sign in</h1>
-                <Form className="flex w-96 flex-col gap-4" onSubmit={handelLogin}>
 
+                <Form className="flex flex-col gap-4" onSubmit={handelLogin}>
                     <TextField
                         isRequired
                         name="email"
@@ -68,15 +70,9 @@ const loginPage = () => {
                         name="password"
                         type="password"
                         validate={(value) => {
-                            if (value.length < 8) {
-                                return "Password must be at least 8 characters";
-                            }
-                            if (!/[A-Z]/.test(value)) {
-                                return "Password must contain at least one uppercase letter";
-                            }
-                            if (!/[0-9]/.test(value)) {
-                                return "Password must contain at least one number";
-                            }
+                            if (value.length < 8) return "Password must be at least 8 characters";
+                            if (!/[A-Z]/.test(value)) return "Password must contain at least one uppercase letter";
+                            if (!/[0-9]/.test(value)) return "Password must contain at least one number";
                             return null;
                         }}
                     >
@@ -85,21 +81,26 @@ const loginPage = () => {
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
-                    <div className="flex gap-2">
-                        <Button type="submit" className='w-full bg-[#198c19] hover:bg-[#21b121]'>
 
+                    <div className="flex flex-col gap-2 mt-2">
+                        <Button type="submit" className='w-full bg-[#198c19] hover:bg-[#21b121] py-2'>
                             Sign in
                         </Button>
+
+                        {/* google sign in btn */}
+                        <Button onClick={handelGoogleLogin} className="w-full" variant="tertiary">
+                            <Icon icon="devicon:google" />
+                            Sign in with Google
+                        </Button>
                     </div>
-                    {/* google sing in btn */}
-                    <Button onClick={handelGoogleLogin} className="w-full" variant="tertiary">
-                        <Icon icon="devicon:google" />
-                        Sign in with Google
-                    </Button>
                 </Form>
-                <p className="text-center mt-4">Don't have an account? <Link href="/register" className="text-blue-500 underline">Register</Link></p>
+
+                <p className="text-center mt-6 text-sm">
+                    Don't have an account? <Link href="/register" className="text-blue-500 underline">Register</Link>
+                </p>
             </div>
         </div>
+
     );
 };
 

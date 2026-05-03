@@ -2,7 +2,12 @@ import React from 'react';
 import TilesCard from './TilesCard';
 
 const FeaturedTiles = async () => {
-    const rsc = await fetch("http://localhost:3000/tiles.json");
+    // const rsc = await fetch("https://the-tiles-gallery.vercel.app/tiles.json", {
+    //     cache: "no-store",
+    // });
+
+
+    const rsc = await fetch("http://localhost:3000/tiles.json")
     const featuredTiles = await rsc.json();
     const tiles = featuredTiles.slice(0, 4);
 
@@ -10,7 +15,7 @@ const FeaturedTiles = async () => {
     return (
         <div>
             <h1 className='text-2xl font-bold'>Featured Tiles:</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20 mt-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20 mt-6 animate__animated animate__fadeIn animate__slow'>
                 {
                     tiles.map(tile => <TilesCard key={tile.id} tile={tile}></TilesCard>)
                 }

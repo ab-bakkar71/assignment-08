@@ -1,11 +1,13 @@
 import Marquee from "react-fast-marquee";
 
 
-const MarqueePage = async() => {
-   // dev
-    const res = await fetch("http://localhost:3000/tiles.json");
+const MarqueePage = async () => {
+
+    const res = await fetch("http://localhost:3000/tiles.json")
     // production
-    // const res = await fetch("https://the-tiles-gallery.vercel.app/tiles.json") 
+    // const res = await fetch("https://the-tiles-gallery.vercel.app/tiles.json", {
+    //     cache: "no-store",
+    // });
 
     const data = await res.json();
     const tiles = data.slice(0, 4);
@@ -21,7 +23,7 @@ const MarqueePage = async() => {
             <Marquee pauseOnHover={true} speed={50} gradient={false}>
                 {
                     tiles.map(tile => <span key={tile.id} className="mx-6">
-                         - {tile.title}
+                        - {tile.title}
                     </span>)
                 }
                 <span>Modern Geometric Patterns | Join the Community...</span>
