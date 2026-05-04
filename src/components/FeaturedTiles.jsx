@@ -2,12 +2,12 @@ import React from 'react';
 import TilesCard from './TilesCard';
 
 const FeaturedTiles = async () => {
-    // const rsc = await fetch("https://the-tiles-gallery.vercel.app/tiles.json", {
-    //     cache: "no-store",
-    // });
+    const rsc = await fetch("https://the-tiles-gallery.vercel.app/tiles.json", {
+        cache: "no-store",
+    });
 
 
-    const rsc = await fetch("http://localhost:3000/tiles.json")
+    // const rsc = await fetch("http://localhost:3000/tiles.json")
     const featuredTiles = await rsc.json();
     const tiles = featuredTiles.slice(0, 4);
 

@@ -2,14 +2,19 @@ import Search from '@/components/Search';
 import TilesCard from '@/components/TilesCard';
 import React from 'react';
 
+export const metadata = {
+  title: 'The Tile Gallery - All Tiles',
+  description: 'Luxurious colorful marble tile that adds a clean and elegant look to any living space.',
+}
+
 const allTiles = async ({ searchParams }) => {
 
     const search = searchParams.search || "";
-    //     const res = await fetch("https://the-tiles-gallery.vercel.app/tiles.json",{
-    //   cache: "no-store",
-    // });
+        const res = await fetch("https://the-tiles-gallery.vercel.app/tiles.json",{
+      cache: "no-store",
+    });
 
-    const res = await fetch('http://localhost:3000/tiles.json')
+    // const res = await fetch('http://localhost:3000/tiles.json')
     const tiles = await res.json()
 
 

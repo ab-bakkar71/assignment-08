@@ -23,7 +23,7 @@ const FooterInput = () => {
       </Surface>
       <div className="flex gap-2 mt-4">
         <Button className='bg-[#198c19]' type="submit">
-          Submit
+          Send Massage
         </Button>
         <Button type="reset" variant="secondary" className='text-[#198c19]'>
           Reset

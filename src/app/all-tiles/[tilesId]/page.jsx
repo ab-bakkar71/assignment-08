@@ -4,15 +4,15 @@ import React from 'react';
 const tilesDetailsPage = async ({ params }) => {
     const { tilesId } = await params;
 
-    // const rse = await fetch("https://the-tiles-gallery.vercel.app/tiles.json", {
-    //     cache: "no-store",
-    // });
+    const rse = await fetch("https://the-tiles-gallery.vercel.app/tiles.json", {
+        cache: "no-store",
+    });
 
-    const rse = await fetch('http://localhost:3000/tiles.json')
+    // const rse = await fetch('http://localhost:3000/tiles.json')
 
     const tiles = await rse.json();
     const tile = tiles.find(t => t.id === tilesId)
-    console.log(tile);
+    
     return (
         <>
             <div className="flex flex-col md:flex-row items-center rounded-sm gap-10 bg-white shadow-md max-md:max-w-80 my-15">
