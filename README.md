@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Tiles Gallery Website
 
-## Getting Started
+A modern and responsive **Tiles Gallery Web Application** built with Next.js. This project allows users to explore, search, and view detailed information about different types of tiles with authentication features.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Website
+
+🔗 [https://the-tiles-gallery.vercel.app/](https://the-tiles-gallery.vercel.app/)
+
+---
+
+## 📌 Project Purpose
+
+This project is designed to showcase a collection of tiles in a visually appealing way. Users can browse tiles, search by title, and view detailed information about each tile.
+
+---
+
+## 🚀 Key Features
+
+### 🏠 Home Page
+* **Banner:** "Discover Your Perfect Aesthetic"
+* **Marquee:** Scrolling updates on latest arrivals.
+* **Featured Tiles:** Showcasing the top 4 tiles.
+
+### 🖼️ All Tiles Page
+* **Dynamic Listing:** Fetches tile data from a JSON source.
+* **🔍 Search Functionality:** Real-time search by tile title.
+* **Responsive Layout:** Clean grid design for all screen sizes.
+* **"View Details":** Quick navigation to individual tile pages.
+
+### 🔍 Tile Details Page
+* **Visuals:** Large high-resolution image preview.
+* **Information:** Detailed title, description, category, and price.
+* **Tags:** Categorized labels (e.g., Minimalist, Blue, Ceramic).
+
+### 🔐 Authentication
+* **Standard Login:** Email & Password authentication.
+* **Social Login:** Google Authentication integrated.
+* **Registration:** User sign-up system.
+* **Feedback:** Error and success handling via toast notifications.
+
+---
+
+## 🛠️ Technologies Used
+
+* ⚛️ **Next.js** (App Router)
+* 🎨 **Tailwind CSS** + **HeroUI / DaisyUI**
+* 🔐 **BetterAuth**
+* 🗄️ **MongoDB**
+* 🔔 **React Hot Toast**
+* 🎞️ **Animate.css**
+
+---
 
 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Responsiveness
 
-## Learn More
+* ✅ **Mobile Friendly**
+* ✅ **Tablet Friendly**
+* ✅ **Desktop Optimized**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔒 Route Permissions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🌍 Public Routes
+* `/` (Home)
+* `/all-tiles`
+* `/login`
+* `/register`
 
-## Deploy on Vercel
+### 🔐 Private Routes
+* `/tile/[id]` (Details Page)
+* `/my-profile`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Additional Features
+
+* **Loading States:** Smooth loaders during data fetching.
+* **404 Page:** Custom "Not Found" page for broken links.
+* **Animations:** Integrated Animate.css for a polished feel.
+* **Modern UI:** Clean, minimalist design focused on imagery.
